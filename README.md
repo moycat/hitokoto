@@ -4,13 +4,25 @@
 
 # 使用说明
 
-安装并启用插件后，在模板调用以下函数。
+安装并启用插件后，有以下方法使用本插件。
+
+## 作为小工具使用
+
+在后台添加“Hitokoto 一言”小工具，即可使用。
+
+可自定义显示格式，引用方式为{type}。
+
+type同json文件中的字段名，包括：id hitokoto cat catname author source date。
+
+## 在模板中调用函数
+
+在模板调用以下函数。
 
 ```php
 /**
  * 打印/返回一条一言的某个属性
  * 不会自动刷新，请调用hitokoto_read()另读一条
- * 属性包括：id hitokoto cat catname author source date
+ * 属性包括： id hitokoto cat catname author source date
  */
 hitikoto($type, $print = true);
 
